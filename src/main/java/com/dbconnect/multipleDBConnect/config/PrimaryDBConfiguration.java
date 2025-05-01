@@ -38,6 +38,18 @@ public class PrimaryDBConfiguration {
         return DataSourceBuilder.create().build();
     }
 
+//    we can also specify manually configuration
+//    @Primary
+//    @Bean
+//    public DataSource primaryDataSource() {
+//        return DataSourceBuilder.create()
+//                .driverClassName("org.postgresql.Driver")  // Specify the driver
+//                .url("jdbc:postgresql://localhost:5432/muldb")  // Specify the URL
+//                .username("postgres")  // Specify the username
+//                .password("root")  // Specify the password
+//                .build();
+//    }
+
     private Map<String, Object> primaryJPAProperties(){
         Map<String, Object> props = new HashMap<>();
         props.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
